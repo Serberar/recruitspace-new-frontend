@@ -1,0 +1,66 @@
+.footer {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 24px 24px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.languageSection {
+  margin-bottom: 8px;
+}
+
+/* Estilos para el selector en footer oscuro */
+.langSelector span {
+  color: #64748b;
+}
+
+.langSelector > div {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.langSelector button {
+  color: #94a3b8;
+}
+
+.langSelector button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+}
+
+.langSelector button[class*="active"] {
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  box-shadow: none;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.powered {
+  color: #64748b;
+  font-weight: 400;
+}
+
+.brandName {
+  color: #e2e8f0;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.copyright {
+  margin: 0;
+  color: #475569;
+  font-size: 0.8125rem;
+}

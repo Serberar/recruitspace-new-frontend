@@ -1,0 +1,20 @@
+{
+  "name": "recruitspace-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:landing": "npm run dev -w apps/landing",
+    "dev:ats": "npm run dev -w apps/ats",
+    "dev:jobs": "npm run dev -w apps/jobs",
+    "build:landing": "npm run build -w apps/landing",
+    "build:ats": "npm run build -w apps/ats",
+    "build:jobs": "npm run build -w apps/jobs",
+    "build:all": "npm run build:landing && npm run build:ats && npm run build:jobs",
+    "lint": "npm run lint -w apps/landing && npm run lint -w apps/ats && npm run lint -w apps/jobs",
+    "test": "npm run test -ws --if-present",
+    "e2e": "npm run e2e -ws --if-present"
+  }
+}

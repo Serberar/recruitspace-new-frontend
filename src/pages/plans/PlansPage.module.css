@@ -1,0 +1,982 @@
+/* PlansPage.module.css - Premium Design v2 */
+
+/* Layout con menu para usuarios logueados */
+.pageWithMenu {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+}
+
+.contentWithMenu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contentWithMenu .container {
+  flex: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+/* Layout para usuarios no logueados (landing) */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-background);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fondo decorativo */
+.page::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1400px;
+  height: 800px;
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 30%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 20% 60%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 30% at 80% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Patrón de grid sutil */
+.page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  flex: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title Section */
+.titleSection {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--color-text) 0%, #4f46e5 50%, var(--color-text) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Account Type Selector - Pills Style */
+.accountTypeSelector {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.accountTypeSelectorWrapper {
+  display: inline-flex;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  padding: 6px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -2px rgba(0, 0, 0, 0.05),
+    inset 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.accountTypeButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.accountTypeButton:hover:not(.accountTypeButtonActive) {
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.accountTypeButtonActive {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #7c3aed 100%);
+  box-shadow:
+    0 4px 14px rgba(99, 102, 241, 0.35),
+    0 2px 6px rgba(99, 102, 241, 0.2);
+}
+
+.accountTypeButtonActive .accountTypeIcon,
+.accountTypeButtonActive .accountTypeLabel,
+.accountTypeButtonActive .accountTypeDesc {
+  color: white;
+}
+
+.accountTypeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 12px;
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.accountTypeButtonActive .accountTypeIcon {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.accountTypeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.125rem;
+}
+
+.accountTypeLabel {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.accountTypeDesc {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  transition: color 0.3s ease;
+}
+
+.accountTypeButtonActive .accountTypeDesc {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Plans Grid */
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+/* Plan Card */
+.planCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 2rem;
+  padding-top: 2.5rem;
+  margin-top: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: visible;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+/* Efecto de brillo sutil en el borde */
+.planCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    transparent 40%,
+    rgba(99, 102, 241, 0.1) 50%,
+    transparent 60%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.planCard:hover::before {
+  opacity: 1;
+}
+
+.planCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.06),
+    0 8px 16px rgba(99, 102, 241, 0.08);
+}
+
+.planCardHighlighted {
+  border: 2px solid var(--color-primary);
+  background: var(--color-surface);
+  box-shadow:
+    0 12px 32px rgba(99, 102, 241, 0.18),
+    0 4px 12px rgba(99, 102, 241, 0.12);
+  transform: scale(1.02);
+}
+
+.planCardHighlighted:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 24px 48px rgba(99, 102, 241, 0.22),
+    0 8px 20px rgba(99, 102, 241, 0.15);
+}
+
+/* Badge - Popular/Recomendado */
+.planBadge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #7c3aed 50%, #8b5cf6 100%);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  box-shadow:
+    0 4px 14px rgba(99, 102, 241, 0.4),
+    0 2px 6px rgba(99, 102, 241, 0.3);
+  white-space: nowrap;
+}
+
+/* Efecto de pulso en el badge */
+.planBadge::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, var(--color-primary), #8b5cf6);
+  opacity: 0;
+  z-index: -1;
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { opacity: 0; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.1); }
+}
+
+.planHighlight {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(5, 150, 105, 0.12) 100%);
+  color: var(--color-success);
+  padding: 0.375rem 0.75rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Plan Header */
+.planHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.planCardHighlighted .planHeader {
+  border-bottom-color: rgba(99, 102, 241, 0.15);
+}
+
+.planNameRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-bottom: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.planName {
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.5px;
+}
+
+.betaTag {
+  padding: 0.25rem 0.625rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #7c3aed 100%);
+  color: white;
+  border-radius: 100px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.newTag {
+  padding: 0.25rem 0.625rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border-radius: 100px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.planPricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.planOriginalPrice {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.planPrice {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.planPriceInterval {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  letter-spacing: 0;
+}
+
+.planCardHighlighted .planPrice {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.planTrial {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(99, 102, 241, 0.08) 100%);
+  color: #4f46e5;
+  border-radius: 100px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.planTrial svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Description */
+.planDescription {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  min-height: 48px;
+}
+
+/* Limits */
+.planLimits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.04) 0%, rgba(139, 92, 246, 0.04) 100%);
+  border-radius: 16px;
+  padding: 1.125rem;
+  border: 1px solid rgba(99, 102, 241, 0.08);
+}
+
+.planLimits li {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.625rem 0;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.planLimits li:not(:last-child) {
+  border-bottom: 1px solid rgba(99, 102, 241, 0.08);
+}
+
+.limitIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+.limitValue {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Features */
+.planFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+  flex: 1;
+}
+
+.planFeatures li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.planFeatures li:hover {
+  color: var(--color-text);
+}
+
+.featureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+/* Button */
+.planButton {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: auto;
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto ripple en botón */
+.planButton::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.planButton:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+.planButtonPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #7c3aed 100%);
+  color: white;
+  box-shadow:
+    0 4px 14px rgba(99, 102, 241, 0.35),
+    0 2px 6px rgba(99, 102, 241, 0.2);
+}
+
+.planButtonPrimary svg {
+  transition: transform 0.3s ease;
+}
+
+.planButtonPrimary:hover svg {
+  transform: translateX(4px);
+}
+
+.planButtonPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 25px rgba(99, 102, 241, 0.45),
+    0 4px 10px rgba(99, 102, 241, 0.25);
+}
+
+.planButtonSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid rgba(99, 102, 241, 0.3);
+}
+
+.planButtonSecondary svg {
+  transition: transform 0.3s ease;
+}
+
+.planButtonSecondary:hover svg {
+  transform: translateX(4px);
+}
+
+.planButtonSecondary:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(139, 92, 246, 0.06) 100%);
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+.planButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Button loading state */
+.planButton:disabled::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: buttonSpin 0.8s linear infinite;
+  opacity: 0;
+}
+
+@keyframes buttonSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Plan Error */
+.planError {
+  font-size: 0.8125rem;
+  color: var(--color-error);
+  text-align: center;
+  margin-bottom: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  background: rgba(239, 68, 68, 0.08);
+  border-radius: 10px;
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  gap: 1.5rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.loadingSpinner {
+  width: 52px;
+  height: 52px;
+  border: 3px solid rgba(99, 102, 241, 0.1);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Error */
+.error {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--color-error);
+  animation: fadeIn 0.5s ease;
+}
+
+.error p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.error button {
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.error button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
+}
+
+/* Org Recruiter Message */
+.orgRecruiterMessage {
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(245, 158, 11, 0.08) 100%);
+  border: 1px solid rgba(251, 191, 36, 0.25);
+  border-radius: 16px;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.orgRecruiterMessage p {
+  margin: 0;
+  color: var(--color-warning-dark);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Trust Badges Section */
+.trustSection {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.trustBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.trustBadge svg {
+  color: var(--color-success);
+  opacity: 0.9;
+}
+
+/* Footer Note */
+.footerNote {
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+/* Guarantee Badge */
+.guaranteeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto 2rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.08) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 100px;
+  color: var(--color-success);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Login Link */
+.loginLink {
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+.loginLink a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.loginLink a:hover {
+  border-bottom-color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .plansGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page::before {
+    width: 100%;
+    height: 500px;
+    top: -100px;
+  }
+
+  .page::after {
+    background-size: 40px 40px;
+  }
+
+  .container {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .header {
+    margin-bottom: 1.5rem;
+  }
+
+  .titleSection {
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    letter-spacing: -1px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Selector de tipo de cuenta móvil */
+  .accountTypeSelectorWrapper {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .accountTypeButton {
+    padding: 0.875rem 1.25rem;
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .accountTypeIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .plansGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 400px;
+  }
+
+  .planCard {
+    padding: 1.5rem;
+    padding-top: 2rem;
+    border-radius: 16px;
+  }
+
+  .planCardHighlighted {
+    transform: none;
+  }
+
+  .planCardHighlighted:hover {
+    transform: translateY(-4px);
+  }
+
+  .planBadge {
+    font-size: 0.6875rem;
+    padding: 0.375rem 1rem;
+  }
+
+  .planName {
+    font-size: 1.375rem;
+  }
+
+  .planPrice {
+    font-size: 2.75rem;
+  }
+
+  .planButton {
+    padding: 0.875rem 1.25rem;
+    border-radius: 12px;
+  }
+
+  .trustSection {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .trustBadge {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.75rem 2.5rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .planCard {
+    padding: 1.25rem;
+    padding-top: 1.75rem;
+  }
+
+  .planLimits {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .planPrice {
+    font-size: 2.5rem;
+  }
+}
+
+/* Animación de entrada escalonada para las cards */
+@media (prefers-reduced-motion: no-preference) {
+  .planCard:nth-child(1) { animation-delay: 0.3s; }
+  .planCard:nth-child(2) { animation-delay: 0.4s; }
+  .planCard:nth-child(3) { animation-delay: 0.5s; }
+  .planCard:nth-child(4) { animation-delay: 0.6s; }
+}

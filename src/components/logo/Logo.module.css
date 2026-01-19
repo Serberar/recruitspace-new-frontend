@@ -1,0 +1,70 @@
+/* src/components/logo/Logo.module.css */
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo de texto */
+.textLogo {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  user-select: none;
+  display: flex;
+}
+
+/* R con degradado azul claro a oscuro */
+.gradientR {
+  background: linear-gradient(
+    180deg,
+    #5bc0de 0%,
+    #17a2b8 30%,
+    #0d6eaa 70%,
+    #0a4d78 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Resto del texto en azul oscuro */
+.darkText {
+  color: #0a3d5c;
+}
+
+/* Sizes */
+.sm {
+  height: 22px;
+}
+
+.sm .textLogo {
+  font-size: 18px;
+}
+
+.md {
+  height: 32px;
+}
+
+.md .textLogo {
+  font-size: 24px;
+}
+
+.lg {
+  height: 44px;
+}
+
+.lg .textLogo {
+  font-size: 32px;
+}
+
+/* Variante light para fondos oscuros - todo blanco */
+.light .darkText {
+  color: white;
+}
+
+.light .gradientR {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: white;
+}

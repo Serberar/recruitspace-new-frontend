@@ -1,0 +1,67 @@
+{
+  "title": "Candidatos",
+  "subtitle": "Gestiona los candidatos de tus procesos de seleccion",
+  "search": {
+    "placeholder": "Buscar candidatos...",
+    "filters": "Filtros",
+    "clearFilters": "Limpiar filtros"
+  },
+  "list": {
+    "empty": "No hay candidatos",
+    "emptyDescription": "Aun no tienes candidatos en tus procesos"
+  },
+  "card": {
+    "email": "Email",
+    "phone": "Telefono",
+    "location": "Ubicacion",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "appliedTo": "Aplicado a",
+    "appliedDate": "Fecha de aplicacion"
+  },
+  "detail": {
+    "title": "Detalle del candidato",
+    "personalInfo": "Informacion personal",
+    "contactInfo": "Informacion de contacto",
+    "professionalInfo": "Informacion profesional",
+    "documents": "Documentos",
+    "cv": "Curriculum",
+    "downloadCv": "Descargar CV",
+    "noCv": "No hay CV disponible",
+    "applications": "Aplicaciones",
+    "notes": "Notas",
+    "addNote": "Agregar nota",
+    "timeline": "Historial"
+  },
+  "status": {
+    "new": "Nuevo",
+    "reviewing": "En revision",
+    "interview": "Entrevista",
+    "offer": "Oferta",
+    "hired": "Contratado",
+    "rejected": "Rechazado",
+    "withdrawn": "Retirado"
+  },
+  "actions": {
+    "viewProfile": "Ver perfil",
+    "moveStage": "Mover etapa",
+    "addToOffer": "Agregar a oferta",
+    "reject": "Rechazar",
+    "sendEmail": "Enviar email",
+    "schedule": "Agendar entrevista"
+  },
+  "filters": {
+    "status": "Estado",
+    "offer": "Oferta",
+    "dateRange": "Rango de fechas",
+    "skills": "Habilidades"
+  },
+  "portal": {
+    "title": "Portal del candidato",
+    "welcome": "Bienvenido, {{name}}",
+    "myApplications": "Mis aplicaciones",
+    "myProfile": "Mi perfil",
+    "updateProfile": "Actualizar perfil",
+    "noApplications": "No tienes aplicaciones activas"
+  }
+}

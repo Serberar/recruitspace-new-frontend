@@ -1,0 +1,67 @@
+{
+  "title": "Candidates",
+  "subtitle": "Manage candidates in your selection processes",
+  "search": {
+    "placeholder": "Search candidates...",
+    "filters": "Filters",
+    "clearFilters": "Clear filters"
+  },
+  "list": {
+    "empty": "No candidates",
+    "emptyDescription": "You don't have any candidates in your processes yet"
+  },
+  "card": {
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "experience": "Experience",
+    "skills": "Skills",
+    "appliedTo": "Applied to",
+    "appliedDate": "Application date"
+  },
+  "detail": {
+    "title": "Candidate details",
+    "personalInfo": "Personal information",
+    "contactInfo": "Contact information",
+    "professionalInfo": "Professional information",
+    "documents": "Documents",
+    "cv": "Resume",
+    "downloadCv": "Download CV",
+    "noCv": "No CV available",
+    "applications": "Applications",
+    "notes": "Notes",
+    "addNote": "Add note",
+    "timeline": "History"
+  },
+  "status": {
+    "new": "New",
+    "reviewing": "Under review",
+    "interview": "Interview",
+    "offer": "Offer",
+    "hired": "Hired",
+    "rejected": "Rejected",
+    "withdrawn": "Withdrawn"
+  },
+  "actions": {
+    "viewProfile": "View profile",
+    "moveStage": "Move stage",
+    "addToOffer": "Add to offer",
+    "reject": "Reject",
+    "sendEmail": "Send email",
+    "schedule": "Schedule interview"
+  },
+  "filters": {
+    "status": "Status",
+    "offer": "Offer",
+    "dateRange": "Date range",
+    "skills": "Skills"
+  },
+  "portal": {
+    "title": "Candidate portal",
+    "welcome": "Welcome, {{name}}",
+    "myApplications": "My applications",
+    "myProfile": "My profile",
+    "updateProfile": "Update profile",
+    "noApplications": "You don't have any active applications"
+  }
+}

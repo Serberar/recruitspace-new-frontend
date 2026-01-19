@@ -1,0 +1,1750 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  max-width: 1000px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.backButton {
+  background: transparent;
+  color: var(--color-text-secondary);
+  padding: var(--spacing-xs) 0;
+  font-size: var(--font-size-sm);
+  width: fit-content;
+}
+
+.backButton:hover {
+  color: var(--color-text);
+}
+
+.headerMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+}
+
+.headerInfo {
+  flex: 1;
+}
+
+.title {
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.currentStatus {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.statusLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.statusBadge {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+/* Content grid */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Main content */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Cards */
+.card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cardHeader .cardTitle {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.cardTitle {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-md) 0;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.editButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.editButton:hover {
+  background: var(--color-bg-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Profile section */
+.profileGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.profileItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.profileLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.profileValue {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.profileValueLink {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.profileValueLink:hover {
+  text-decoration: underline;
+}
+
+/* Profile sections (summary, skills) */
+.profileSection {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.profileSectionTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.profileSectionText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.skillTag {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+/* Edit form */
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.editField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.editLabel {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.required {
+  color: var(--color-danger);
+}
+
+.editInput,
+.editTextarea {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-card);
+  color: var(--color-text);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.editTextarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.editInput:focus,
+.editTextarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.editInput:disabled,
+.editTextarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.editInputDisabled {
+  background-color: var(--color-bg-secondary);
+}
+
+.editHint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.editError {
+  background-color: var(--color-danger-light);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: #991b1b;
+  font-size: var(--font-size-sm);
+}
+
+.editActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.editCancelButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.editCancelButton:hover:not(:disabled) {
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+}
+
+.editCancelButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.editSaveButton {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-md);
+  color: white;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.editSaveButton:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+}
+
+.editSaveButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* CV section */
+.cvSection {
+  margin-bottom: var(--spacing-lg);
+}
+
+.cvSection:last-child {
+  margin-bottom: 0;
+}
+
+.cvSectionTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-sm) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.cvSummary {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* Skills list */
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.skillBadge {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+/* Experience list */
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.experienceItem {
+  padding: var(--spacing-sm);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-primary);
+}
+
+.experienceHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.experienceRole {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.experienceCompany {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.experienceDates {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.experienceDescription {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Education list */
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.educationItem {
+  padding: var(--spacing-sm);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-info);
+}
+
+.educationHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.educationDegree {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.educationField {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.educationInstitution {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  display: block;
+}
+
+.educationDates {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  display: block;
+  margin-top: var(--spacing-xs);
+}
+
+/* Old CV button (kept for compatibility) */
+.cvButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-bg-card);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  font-size: var(--font-size-sm);
+}
+
+.cvButton:hover {
+  background-color: var(--color-primary-light);
+}
+
+/* Process history */
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.historyItem {
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+}
+
+.historyItemCurrent {
+  border: 2px solid var(--color-primary);
+}
+
+.historyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.historyStatus {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.historyDate {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* Comments section */
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.commentItem {
+  padding: var(--spacing-sm);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.commentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-xs);
+}
+
+.commentHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.commentActions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.commentActionBtn {
+  background: transparent;
+  border: none;
+  padding: 2px 6px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.commentActionBtn:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-text);
+}
+
+.editCommentForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.editCommentActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+}
+
+.editCancelBtn {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-xs);
+}
+
+.editCancelBtn:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.editSaveBtn {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--color-primary);
+  color: white;
+  font-size: var(--font-size-xs);
+}
+
+.editSaveBtn:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.editSaveBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.commentAuthor {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.commentDate {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.commentContent {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.emptyComments {
+  text-align: center;
+  padding: var(--spacing-lg);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.addCommentForm {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.commentInput {
+  flex: 1;
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+}
+
+.addCommentButton {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary);
+  color: white;
+  font-size: var(--font-size-sm);
+}
+
+.addCommentButton:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Action card */
+.actionCard {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.actionTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.primaryAction {
+  width: 100%;
+  padding: var(--spacing-md);
+  background-color: var(--color-primary);
+  color: white;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.primaryAction:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.secondaryActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.secondaryAction {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-bg-card);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+}
+
+.secondaryAction:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.rejectAction {
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.rejectAction:hover {
+  background-color: var(--color-danger-light);
+}
+
+/* Status change modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  max-width: 400px;
+  width: 90%;
+}
+
+.modalTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.modalText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.modalInfo {
+  background-color: var(--color-info-light);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.modalInfoText {
+  font-size: var(--font-size-sm);
+  color: #1e40af;
+  margin: 0;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+}
+
+.modalCancel {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-bg-card);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.modalCancel:hover {
+  background-color: var(--color-bg-hover);
+}
+
+.modalConfirm {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.modalConfirm:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.modalReject {
+  background-color: var(--color-danger);
+}
+
+.modalReject:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2xl);
+  gap: var(--spacing-md);
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error */
+.error {
+  background-color: var(--color-danger-light);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  color: #991b1b;
+}
+
+.error h3 {
+  color: #991b1b;
+  margin-bottom: var(--spacing-sm);
+}
+
+.retryButton {
+  margin-top: var(--spacing-md);
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.retryButton:hover {
+  background-color: #dc2626;
+}
+
+/* Status selector */
+.statusSelectHint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.statusList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.statusOption {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.statusOption:hover:not(:disabled) {
+  background-color: var(--color-bg-hover);
+  border-color: var(--color-primary);
+}
+
+.statusOption:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.statusOptionCurrent {
+  border: 2px solid var(--color-primary);
+}
+
+.statusOptionCurrent:disabled {
+  opacity: 1;
+}
+
+.statusOptionName {
+  flex: 1;
+  color: var(--color-text);
+}
+
+/* Pipeline Instructions */
+.pipelineInstructions {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.pipelineInstructionsTitle {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+/* Recruiter Actions */
+.recruiterActionsCard {
+  background-color: var(--color-bg-card);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.recruiterActionsTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.recruiterActionSection {
+  margin-bottom: var(--spacing-md);
+}
+
+.recruiterActionSection:last-child {
+  margin-bottom: 0;
+}
+
+.recruiterActionLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-xs);
+}
+
+.videoCallButton {
+  width: 100%;
+  padding: var(--spacing-md);
+  background-color: var(--color-success);
+  color: white;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+}
+
+.videoCallButton:hover {
+  background-color: #059669;
+}
+
+.downloadButton {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-info);
+  color: white;
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  text-decoration: none;
+}
+
+.downloadButton:hover {
+  opacity: 0.9;
+}
+
+.noAction {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--spacing-sm);
+}
+
+.uploadButton {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary);
+  color: white;
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.uploadButton:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.uploadButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.uploadError {
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
+  margin: var(--spacing-xs) 0;
+}
+
+.submissionDate {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.noFileText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Video call scheduling in modal */
+.scheduleFields {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.scheduleHint {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.scheduleInputs {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.scheduleField {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.scheduleLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.scheduleInput {
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-bg-card);
+  color: var(--color-text);
+}
+
+.scheduleInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* Scheduled video call info */
+.scheduledInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background-color: var(--color-info-light);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.scheduledIcon {
+  font-size: var(--font-size-lg);
+}
+
+.scheduledContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.scheduledLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.scheduledText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  flex: 1;
+}
+
+.scheduledDate {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* Schedule actions (edit/delete buttons) */
+.scheduleActions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.editScheduleButton,
+.deleteScheduleButton {
+  background: transparent;
+  border: none;
+  padding: var(--spacing-xs);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s;
+}
+
+.editScheduleButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.deleteScheduleButton:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.deleteScheduleButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Generic icon button (used for instructions edit/delete) */
+.iconButton {
+  background: transparent;
+  border: none;
+  padding: var(--spacing-xs);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s;
+}
+
+.iconButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.iconButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Edit schedule form */
+.editScheduleForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.editScheduleActions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.saveScheduleButton {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.saveScheduleButton:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+}
+
+.saveScheduleButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cancelScheduleButton {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.cancelScheduleButton:hover:not(:disabled) {
+  background-color: var(--color-surface-hover);
+}
+
+/* No schedule state */
+.noScheduleInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background-color: var(--color-surface-secondary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.noScheduleText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.addScheduleButton {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.addScheduleButton:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Instructions field in status change modal */
+.instructionsField {
+  margin-bottom: var(--spacing-lg);
+}
+
+.instructionsLabel {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.optionalLabel {
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.instructionsTextarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+  resize: vertical;
+  min-height: 60px;
+  background-color: var(--color-bg-card);
+  color: var(--color-text);
+}
+
+.instructionsTextarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.instructionsTextarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.instructionsHint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: var(--spacing-xs) 0 0 0;
+}
+
+/* Current instructions display in sidebar */
+.currentInstructions {
+  margin-top: var(--spacing-sm);
+}
+
+.instructionsHeader {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--spacing-xs);
+}
+
+.instructionsText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  line-height: 1.5;
+  margin: 0;
+  padding: var(--spacing-sm);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-sm);
+  white-space: pre-wrap;
+}
+
+.instructionsActions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.noInstructions {
+  margin-top: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.noInstructionsText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.editInstructionsForm {
+  margin-top: var(--spacing-sm);
+}
+
+.editInstructionsActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+.cancelButton,
+.saveButton {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.cancelButton {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.cancelButton:hover:not(:disabled) {
+  background-color: var(--color-bg-hover);
+}
+
+.saveButton {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.saveButton:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+}
+
+.saveButton:disabled,
+.cancelButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Messages section */
+.messagesContainer {
+  margin-bottom: var(--spacing-md);
+}
+
+.messagesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-height: 300px;
+  overflow-y: auto;
+  padding: var(--spacing-sm);
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.emptyMessages {
+  text-align: center;
+  padding: var(--spacing-lg);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.messageItem {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  max-width: 85%;
+}
+
+.messageRecruiter {
+  background-color: var(--color-primary);
+  color: white;
+  align-self: flex-end;
+}
+
+.messageCandidate {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  align-self: flex-start;
+}
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.messageAuthor {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+}
+
+.messageRecruiter .messageAuthor,
+.messageRecruiter .messageTime {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.messageCandidate .messageAuthor {
+  color: var(--color-text-secondary);
+}
+
+.messageTime {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.messageContent {
+  font-size: var(--font-size-sm);
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+
+.messageRecruiter .messageContent {
+  color: white;
+}
+
+.addMessageForm {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.messageInput {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+}
+
+.messageInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.sendMessageButton {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.sendMessageButton:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+}
+
+.sendMessageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Sidebar Comments */
+.sidebarCommentsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.sidebarCommentItem {
+  padding: var(--spacing-sm);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.sidebarCommentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.sidebarCommentAuthor {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.sidebarCommentActions {
+  display: flex;
+  gap: 2px;
+}
+
+.sidebarCommentActionBtn {
+  background: transparent;
+  border: none;
+  padding: 2px 4px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.sidebarCommentActionBtn:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-text);
+}
+
+.sidebarCommentContent {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.4;
+  max-height: 150px;
+  overflow: auto;
+  word-break: break-word;
+}
+
+.sidebarCommentDate {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  display: block;
+  margin-top: var(--spacing-xs);
+}
+
+.sidebarCommentInput {
+  width: 100%;
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-card);
+}
+
+.sidebarCommentInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.addSidebarCommentForm {
+  display: flex;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-md);
+}
+
+.addSidebarCommentButton {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary);
+  color: white;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.addSidebarCommentButton:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.addSidebarCommentButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Edit form sections */
+.editSectionTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.editFieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 600px) {
+  .editFieldRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Editable items (experience, education) */
+.editableItem {
+  position: relative;
+  padding: var(--spacing-md);
+  padding-right: var(--spacing-xl);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-sm);
+}
+
+.editableItemFields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.removeItemButton {
+  position: absolute;
+  top: var(--spacing-xs);
+  right: var(--spacing-xs);
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.removeItemButton:hover:not(:disabled) {
+  background: var(--color-danger-light);
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.removeItemButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.addItemButton {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: transparent;
+  border: 1px dashed var(--color-primary);
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.addItemButton:hover:not(:disabled) {
+  background: var(--color-primary-light);
+}
+
+.addItemButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emptyListHint {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-style: italic;
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+/* Experience display for view mode */
+.experienceInstitution {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Card header actions container */
+.cardHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* Download CV button */
+.downloadCvButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-md);
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.downloadCvButton:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.downloadCvButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.downloadCvButton svg {
+  flex-shrink: 0;
+}
+
+/* Spinner for loading state */
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
