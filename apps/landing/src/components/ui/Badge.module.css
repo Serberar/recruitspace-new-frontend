@@ -1,0 +1,98 @@
+/* src/components/ui/Badge.module.css */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: var(--radius-sm);
+}
+
+/* Sizes */
+.sm {
+  font-size: var(--font-size-xs);
+  padding: 2px var(--spacing-xs);
+}
+
+.md {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.lg {
+  font-size: var(--font-size-base);
+  padding: var(--spacing-xs) var(--spacing-md);
+}
+
+/* Pill shape */
+.pill {
+  border-radius: var(--radius-full);
+}
+
+/* Variants */
+.default {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+}
+
+.primary {
+  background: var(--color-primary-light, rgba(59, 130, 246, 0.1));
+  color: var(--color-primary);
+}
+
+.success {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--color-success);
+}
+
+.warning {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.error {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-error);
+}
+
+.info {
+  background: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+}
+
+/* Dot indicator */
+.dot {
+  padding-left: var(--spacing-sm);
+}
+
+.dotIndicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.sm .dotIndicator {
+  width: 5px;
+  height: 5px;
+}
+
+.lg .dotIndicator {
+  width: 8px;
+  height: 8px;
+}
+
+/* Icon */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon svg {
+  width: 1em;
+  height: 1em;
+}

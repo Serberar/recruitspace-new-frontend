@@ -1,0 +1,110 @@
+{
+  "title": "Job Offers",
+  "subtitle": "Manage your job offers",
+  "create": {
+    "title": "New offer",
+    "subtitle": "Create a new job offer"
+  },
+  "edit": {
+    "title": "Edit offer",
+    "subtitle": "Modify offer details"
+  },
+  "form": {
+    "title": "Job title",
+    "titlePlaceholder": "e.g. Full Stack Developer",
+    "description": "Description",
+    "descriptionPlaceholder": "Describe the position and its responsibilities...",
+    "requirements": "Requirements",
+    "requirementsPlaceholder": "List the job requirements...",
+    "client": "Client",
+    "selectClient": "Select client",
+    "location": "Location",
+    "locationPlaceholder": "e.g. New York, USA",
+    "modality": "Work mode",
+    "salary": "Salary",
+    "salaryMin": "Minimum salary",
+    "salaryMax": "Maximum salary",
+    "currency": "Currency",
+    "experience": "Years of experience",
+    "skills": "Required skills",
+    "addSkill": "Add skill",
+    "benefits": "Benefits",
+    "benefitsPlaceholder": "List the job benefits...",
+    "deadline": "Deadline",
+    "publish": "Publish offer",
+    "saveDraft": "Save draft"
+  },
+  "list": {
+    "empty": "No offers",
+    "emptyDescription": "Create your first job offer",
+    "createFirst": "Create offer"
+  },
+  "card": {
+    "candidates": "{{count}} candidate",
+    "candidates_plural": "{{count}} candidates",
+    "location": "Location",
+    "salary": "Salary",
+    "posted": "Posted",
+    "deadline": "Deadline",
+    "client": "Client"
+  },
+  "detail": {
+    "title": "Offer details",
+    "overview": "Overview",
+    "candidates": "Candidates",
+    "pipeline": "Pipeline",
+    "settings": "Settings",
+    "description": "Description",
+    "requirements": "Requirements",
+    "benefits": "Benefits"
+  },
+  "status": {
+    "draft": "Draft",
+    "published": "Published",
+    "closed": "Closed",
+    "paused": "Paused"
+  },
+  "modality": {
+    "remote": "Remote",
+    "onsite": "On-site",
+    "hybrid": "Hybrid"
+  },
+  "actions": {
+    "view": "View offer",
+    "edit": "Edit",
+    "duplicate": "Duplicate",
+    "publish": "Publish",
+    "unpublish": "Unpublish",
+    "close": "Close",
+    "delete": "Delete",
+    "shareLink": "Copy link",
+    "viewPublic": "View public page"
+  },
+  "pipeline": {
+    "title": "Selection pipeline",
+    "stages": "Stages",
+    "addStage": "Add stage",
+    "editStage": "Edit stage",
+    "deleteStage": "Delete stage",
+    "moveCandidate": "Move candidate",
+    "defaultStages": {
+      "applied": "Applied",
+      "screening": "Screening",
+      "interview": "Interview",
+      "offer": "Offer",
+      "hired": "Hired"
+    }
+  },
+  "public": {
+    "applyNow": "Apply now",
+    "alreadyApplied": "You already applied to this offer",
+    "applicationSuccess": "Application submitted successfully",
+    "backToJobs": "View more offers"
+  },
+  "filters": {
+    "status": "Status",
+    "client": "Client",
+    "modality": "Work mode",
+    "dateRange": "Date range"
+  }
+}

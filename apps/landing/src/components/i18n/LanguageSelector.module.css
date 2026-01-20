@@ -1,0 +1,117 @@
+.selector {
+  display: inline-flex;
+  align-items: center;
+}
+
+.select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 0.375rem;
+  background-color: var(--color-bg, #ffffff);
+  color: var(--color-text, #1f2937);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.select:hover {
+  border-color: var(--color-primary, #3b82f6);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary, #3b82f6);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Minimal variant */
+.minimal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-secondary, #64748b);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.buttons {
+  display: inline-flex;
+  gap: 0.125rem;
+  background: var(--color-bg-hover, #f1f5f9);
+  border-radius: 0.375rem;
+  padding: 0.125rem;
+}
+
+.minimalButton {
+  padding: 0.375rem 0.625rem;
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary, #64748b);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: background-color 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+.minimalButton:hover {
+  background-color: var(--color-bg, #ffffff);
+  color: var(--color-text, #1e293b);
+}
+
+.minimalButton.active {
+  background-color: var(--color-bg, #ffffff);
+  color: var(--color-text, #1e293b);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme */
+.dark .select {
+  background-color: #334155;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+
+.dark .select:hover {
+  border-color: #64748b;
+}
+
+.dark .select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.dark .label {
+  color: #94a3b8;
+}
+
+.dark .buttons {
+  background: #334155;
+}
+
+.dark .minimalButton {
+  color: #94a3b8;
+}
+
+.dark .minimalButton:hover {
+  background-color: #475569;
+  color: #f1f5f9;
+}
+
+.dark .minimalButton.active {
+  background-color: #475569;
+  color: #f1f5f9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive - ocultar label en móvil */
+@media (max-width: 768px) {
+  .label {
+    display: none;
+  }
+}

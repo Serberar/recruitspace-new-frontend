@@ -1,0 +1,110 @@
+{
+  "title": "Ofertas de empleo",
+  "subtitle": "Gestiona tus ofertas de empleo",
+  "create": {
+    "title": "Nueva oferta",
+    "subtitle": "Crea una nueva oferta de empleo"
+  },
+  "edit": {
+    "title": "Editar oferta",
+    "subtitle": "Modifica los detalles de la oferta"
+  },
+  "form": {
+    "title": "Titulo del puesto",
+    "titlePlaceholder": "ej. Desarrollador Full Stack",
+    "description": "Descripcion",
+    "descriptionPlaceholder": "Describe el puesto y sus responsabilidades...",
+    "requirements": "Requisitos",
+    "requirementsPlaceholder": "Lista los requisitos del puesto...",
+    "client": "Cliente",
+    "selectClient": "Seleccionar cliente",
+    "location": "Ubicacion",
+    "locationPlaceholder": "ej. Madrid, Espana",
+    "modality": "Modalidad",
+    "salary": "Salario",
+    "salaryMin": "Salario minimo",
+    "salaryMax": "Salario maximo",
+    "currency": "Moneda",
+    "experience": "Anos de experiencia",
+    "skills": "Habilidades requeridas",
+    "addSkill": "Agregar habilidad",
+    "benefits": "Beneficios",
+    "benefitsPlaceholder": "Lista los beneficios del puesto...",
+    "deadline": "Fecha limite",
+    "publish": "Publicar oferta",
+    "saveDraft": "Guardar borrador"
+  },
+  "list": {
+    "empty": "No hay ofertas",
+    "emptyDescription": "Crea tu primera oferta de empleo",
+    "createFirst": "Crear oferta"
+  },
+  "card": {
+    "candidates": "{{count}} candidato",
+    "candidates_plural": "{{count}} candidatos",
+    "location": "Ubicacion",
+    "salary": "Salario",
+    "posted": "Publicado",
+    "deadline": "Fecha limite",
+    "client": "Cliente"
+  },
+  "detail": {
+    "title": "Detalle de la oferta",
+    "overview": "Resumen",
+    "candidates": "Candidatos",
+    "pipeline": "Pipeline",
+    "settings": "Configuracion",
+    "description": "Descripcion",
+    "requirements": "Requisitos",
+    "benefits": "Beneficios"
+  },
+  "status": {
+    "draft": "Borrador",
+    "published": "Publicada",
+    "closed": "Cerrada",
+    "paused": "Pausada"
+  },
+  "modality": {
+    "remote": "Remoto",
+    "onsite": "Presencial",
+    "hybrid": "Hibrido"
+  },
+  "actions": {
+    "view": "Ver oferta",
+    "edit": "Editar",
+    "duplicate": "Duplicar",
+    "publish": "Publicar",
+    "unpublish": "Despublicar",
+    "close": "Cerrar",
+    "delete": "Eliminar",
+    "shareLink": "Copiar enlace",
+    "viewPublic": "Ver pagina publica"
+  },
+  "pipeline": {
+    "title": "Pipeline de seleccion",
+    "stages": "Etapas",
+    "addStage": "Agregar etapa",
+    "editStage": "Editar etapa",
+    "deleteStage": "Eliminar etapa",
+    "moveCandidate": "Mover candidato",
+    "defaultStages": {
+      "applied": "Aplicados",
+      "screening": "Screening",
+      "interview": "Entrevista",
+      "offer": "Oferta",
+      "hired": "Contratado"
+    }
+  },
+  "public": {
+    "applyNow": "Aplicar ahora",
+    "alreadyApplied": "Ya aplicaste a esta oferta",
+    "applicationSuccess": "Aplicacion enviada correctamente",
+    "backToJobs": "Ver mas ofertas"
+  },
+  "filters": {
+    "status": "Estado",
+    "client": "Cliente",
+    "modality": "Modalidad",
+    "dateRange": "Rango de fechas"
+  }
+}
